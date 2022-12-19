@@ -1,6 +1,4 @@
-"# OOP-SOLUTIONS-SAMPLE" 
-"# OOP-SOLUTIONS-SAMPLE" 
-#Modeling the Classification of the Animal Kingdom in JavaScript
+Modeling the Classification of the Animal Kingdom in JavaScript
 This project is a JavaScript class that models the classification of the animal kingdom. It applies all four principles of object-oriented programming (OOP): encapsulation, abstraction, inheritance, and polymorphism.
 
 Encapsulation
@@ -16,13 +14,19 @@ Polymorphism
 Polymorphism is the principle of being able to take on multiple forms. In this project, polymorphism is demonstrated through the use of method overriding. For example, the Animal class has a move method that returns the string "The animal is moving." However, the Mammal class has its own implementation of the move method that returns the string "The mammal is running." When a Mammal object calls the move method, it will use the version of the method that is specific to mammals, rather than the version defined in the Animal class.
 
 Usage
-To use the Animal class in your own project, you can simply include the file containing the class definition and create new Animal objects using the new keyword
+To use the Animal class in your own project, you can simply include the file containing the class definition and create new Animal objects using the new keyword:
 
+Copy code
+const Animal = require('./Animal');
 
-##Conclusion
-This project demonstrates how the principles of OOP can be applied in JavaScript to model the classification of the animal kingdom. By encapsulating data and methods within objects, abstracting implementation details, using inheritance to create derived classes, and implementing polymorphism through method overriding, we can create a flexible and extensible system for representing animals in code.
-"# OPP-Animal-kingdom" 
-"# animal-kingdom" 
-"# animal-kingdom" 
-"# animal-kingdom" 
-"# animal-kingdom" 
+const dog = new Animal('dog', 'canine');
+console.log(dog.getName()); // Outputs "dog"
+You can also create a new class that is derived from the Animal class using the extends keyword:
+
+Copy code
+const Mammal = require('./Mammal');
+
+const cat = new Mammal('cat', 'feline');
+console.log(cat.move()); // Outputs "The mammal is running."
+Conclusion
+This project demonstrates how the principles of OOP can be applied in JavaScript to model the classification of the animal kingdom. By encapsulating data and methods within objects, abstracting implementation details, using inheritance to create derived classes, and implementing polymorphism through method overriding, we can create a flexible and extensible system for representing animals in code
